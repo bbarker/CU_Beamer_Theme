@@ -63,6 +63,7 @@
 \usepackage{multicol}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\graphicspath{{./figures/}}
 \usepackage[all,knot]{xy}
 \xyoption{arc}
 \usepackage{url}
@@ -101,6 +102,40 @@
 
 \section{Introduction}
 \subsection{Beamer Intro}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Logos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Note, please be aware that you may only use the 
+% institutional logos on media if you are authorized
+% to do so. Please check each institution's web site
+% for details.
+
+\newcommand{\TriILogo}[1]{%
+\begin{tabular}{ccc}
+  \includegraphics[height=#1]{CULogo187_crop}
+&
+  \includegraphics[height=#1]{mskcc}
+&
+  \includegraphics[height=#1]{CU_Weill} 
+  % Note that due to not actually having a Weill
+  % login, I couldn't get a vector graphics or hi-res 
+  % version. Please send a pull request if you have it.
+\\
+\end{tabular}%
+} % end of [\TriILogo]
+
+\frame{\frametitle{Some Cornell logos - feel free to add or improve!}
+
+The Tri-Instituional CBM logo:\\
+\vspace{0.2in}
+\TriILogo{0.6in}
+
+\vspace{0.4in}
+
+Cornell print logo:\\
+\vspace{0.2in}
+\includegraphics[height=0.6in]{CULogo187}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
