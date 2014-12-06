@@ -79,6 +79,8 @@
 \usepackage{url}
 \usepackage{multimedia} % likely better alternative: media9
 \usepackage{hyperref}
+\usepackage{listings}
+
      
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Page Info %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -704,6 +706,42 @@ There are multiple ways to do overlays:
 \end{enumerate}
 
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Listing Code}
+
+{\color{gray!65}
+
+{\only<1>{\color{black}}
+\begin{lstlisting}[basicstyle=\ttfamily\tiny, language=perl, showstringspaces=false]
+
+#Counting slowly
+
+$| = 1; # autoflush STDOUT
+
+$i = 0;
+while (true) {
+  print "$i ";
+  $i = $i + 1;
+  sleep(1);
+}
+\end{lstlisting}}
+
+\vspace{4ex}
+
+{\only<2>{\color{black}}
+\begin{lstlisting}[basicstyle=\ttfamily\tiny, language=MATLAB, showstringspaces=false]
+function [e, e_sd, rxn_rule_group] = ...
+    computeMinDisj(model, genedata_filename)
+function v = falcon(model, e, e_sd, varargin)
+\end{lstlisting}}
+
+} % end of \color{gray}
+
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
